@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+#DH_VERBOSE = 1
+
+export PYBUILD_NAME = ofxstatement
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_clean:
+	dh_clean
+	rm -rf src/ofxstatement.egg-info

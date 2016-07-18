@@ -1,0 +1,7 @@
+ofxstatement for Debian
+-----------------------
+
+You may want to install ofxstatement-plugins package which provides most plugins
+referenced in ofxstatement's readme file.
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Tue, 19 Jul 2016 01:22:54 +0300

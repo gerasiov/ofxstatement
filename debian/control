@@ -1,0 +1,25 @@
+Source: ofxstatement
+Section: misc
+Priority: optional
+Maintainer: Alexander GQ Gerasiov <gq@debian.org>
+Build-Depends: debhelper (>= 9),
+ dh-python, python3-all, python3-setuptools,
+ python3-appdirs, python3-mock,
+Standards-Version: 3.9.8
+Homepage: https://github.com/kedder/ofxstatement
+Vcs-Git: https://github.com/gerasiov/ofxstatement.git
+Vcs-Browser: https://github.com/gerasiov/ofxstatement
+
+Package: ofxstatement
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Recommends: ofxstatement-plugins
+Description: tool to convert proprietary bank statement to OFX format
+ Most internet banking systems are capable of exporting account transactions to
+ some sort of computer readable formats, but few supports standard data formats,
+ like OFX. On the other hand, personal accounting tools, such as GnuCash support
+ standard formats only, and will probably never support proprietary statement
+ formats of online banking systems.
+ .
+ Ofxstatement is a tool to convert proprietary bank statement to OFX format,
+ suitable for importing to GnuCash
