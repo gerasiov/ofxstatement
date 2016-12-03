@@ -22,9 +22,9 @@ class RunTests(TestCommand):
         res = runner.run(tests)
         sys.exit(not res.wasSuccessful())
 
-version = "0.5.0"
+version = "0.6.0"
 
-with open("CHANGES.rst") as chlogf, open('README.rst') as rdmef:
+with open("CHANGES.rst") as chlogf, open('README.rst', encoding = 'utf-8') as rdmef:
     long_description = chlogf.read() + "\n\n" + rdmef.read()
 
 setup(name='ofxstatement',
@@ -46,7 +46,7 @@ setup(name='ofxstatement',
           'Topic :: Utilities',
           'Environment :: Console',
           'Operating System :: OS Independent',
-          'License :: OSI Approved :: GNU Affero General Public License v3'],
+          'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'],
       packages=find_packages('src'),
       namespace_packages=["ofxstatement", "ofxstatement.plugins"],
       entry_points={
@@ -55,7 +55,7 @@ setup(name='ofxstatement',
           },
       package_dir={'': 'src'},
       install_requires=['setuptools',
-                        'appdirs'
+                        'appdirs>=1.3.0'
                         ],
       extras_require={'test': ["mock"]},
       tests_require=["mock"],
