@@ -1,3 +1,10 @@
+ofxstatement (0.6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove 01.fix-setup-encoding.patch (fixed upstream).
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Sun, 04 Dec 2016 02:29:31 +0300
+
 ofxstatement (0.5.0-2) unstable; urgency=medium
 
   * 01.fix-setup-encoding.patch added: fixes build in non-utf8 locales.
