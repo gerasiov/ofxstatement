@@ -51,8 +51,14 @@ easy_install or pip, for example::
   $ pip3 install ofxstatement-lithuanian
 
 Note, that ofxstatement itself will be installed automatically this way. After
-installation, ``ofxstatement`` utility should be available. You can check it
-is working by running::
+installation, ``ofxstatement`` utility should be available.
+
+Users of *Ubuntu* and *Debian* operating systems can install ofxstatement from 
+official package repositories::
+
+  $ apt install ofxstatement ofxstatement-plugins 
+
+You can check ofxstatement is working by running::
 
   $ ofxstatement list-plugins
 
@@ -107,6 +113,7 @@ Plugin                            Description
 `ofxstatement-polish`_            Support for some Polish banks and financial institutions
 `ofxstatement-russian`_           Support for several Russian banks: Avangard, Tinkoff, Sberbank (debit).
 `ofxstatement-dab`_               DAB Bank (Germany)
+`ofxstatement-is-arionbanki`_     Arion bank in Iceland
 ================================= ============================================
 
 
@@ -134,6 +141,8 @@ Plugin                            Description
 .. _ofxstatement-polish: https://github.com/yay6/ofxstatement-polish
 .. _ofxstatement-russian: https://github.com/gerasiov/ofxstatement-russian
 .. _ofxstatement-dab: https://github.com/JohannesKlug/ofxstatement-dab
+.. _ofxstatement-is-arionbanki: https://github.com/Dagur/ofxstatement-is-arionbanki
+
 Advanced Configuration
 ======================
 
