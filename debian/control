@@ -5,7 +5,7 @@ Maintainer: Alexander GQ Gerasiov <gq@debian.org>
 Build-Depends: debhelper (>= 9),
  dh-python, python3-all, python3-setuptools,
  python3-appdirs, python3-mock,
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: https://github.com/kedder/ofxstatement
 Vcs-Git: https://github.com/gerasiov/ofxstatement.git
 Vcs-Browser: https://github.com/gerasiov/ofxstatement
