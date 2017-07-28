@@ -1,3 +1,10 @@
+ofxstatement (0.6.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.0.0 (no additional changes needed).
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Fri, 28 Jul 2017 15:18:07 +0300
+
 ofxstatement (0.6.0-1) unstable; urgency=medium
 
   * New upstream release.
