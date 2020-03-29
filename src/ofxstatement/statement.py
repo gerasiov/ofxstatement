@@ -1,6 +1,8 @@
 """Statement model"""
 
 from datetime import datetime
+from decimal import Decimal as D
+from hashlib import sha1
 
 
 TRANSACTION_TYPES = [
@@ -38,6 +40,8 @@ class Statement(object):
     currency = None
     bank_id = None
     account_id = None
+    # Type of account, must be one of ACCOUNT_TYPE
+    account_type = None
 
     start_balance = None
     start_date = None
@@ -45,11 +49,13 @@ class Statement(object):
     end_balance = None
     end_date = None
 
-    def __init__(self, bank_id=None, account_id=None, currency=None):
+    def __init__(self, bank_id=None, account_id=None,
+                 currency=None, account_type="CHECKING"):
         self.lines = []
         self.bank_id = bank_id
         self.account_id = account_id
         self.currency = currency
+        self.account_type = account_type
 
 
 class StatementLine(object):
@@ -65,13 +71,13 @@ class StatementLine(object):
     memo = ""
 
     # Amount of transaction
-    amount = 0.0
+    amount = D(0)
 
     # additional fields
     payee = ""
 
     # Date user initiated transaction, if known
-    date_user = ""
+    date_user = datetime.now()
 
     # Check (or other reference) number
     check_no = ""
@@ -153,9 +159,11 @@ def generate_transaction_id(stmt_line):
     This function can be used in statement parsers when real transaction id is
     not available in source statement.
     """
-    return str(abs(hash((stmt_line.date,
-                         stmt_line.memo,
-                         stmt_line.amount))))
+    h = sha1()
+    h.update(stmt_line.date.strftime("%Y-%m-%d %H:%M:%S").encode("utf8"))
+    h.update(stmt_line.memo.encode("utf8"))
+    h.update(str(stmt_line.amount).encode("utf8"))
+    return h.hexdigest()
 
 
 def recalculate_balance(stmt):
@@ -169,7 +177,7 @@ def recalculate_balance(stmt):
 
     total_amount = sum(sl.amount for sl in stmt.lines)
 
-    stmt.start_balance = stmt.start_balance or 0.0
+    stmt.start_balance = stmt.start_balance or D(0)
     stmt.end_balance = stmt.start_balance + total_amount
     stmt.start_date = min(sl.date for sl in stmt.lines)
     stmt.end_date = max(sl.date for sl in stmt.lines)
