@@ -2,7 +2,29 @@
 Changes
 ~~~~~~~
 
+0.6.4 (2020-03-04)
+==================
+
+- Fix regression introduced in 0.6.3 - `edit-config` command stopped working.
+
+
+0.6.3 (2020-02-13)
+==================
+
+- Fix config editing on Windows
+
+0.6.2 (2020-01-20)
+==================
+
+- Better `EDITOR` environment variable handling for `edit-config` command
+- Support Python-3.7
+- API: type of StatementLine.date_user (date when user initiated transaction)
+  will not be a string by default.
+- API: More unique generated transaction ids (when one is not available from
+  the statement file)
+
 0.6.1 (2017-05-07)
+==================
 
 - Fix installation problem on python-3.5 (#55)
 

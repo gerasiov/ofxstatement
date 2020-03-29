@@ -88,6 +88,8 @@ Plugin                            Description
                                   format (e.g., FIO banka, module
                                   ``gpc``).
 
+`ofxstatement-airbankcz`_         Plugin for Air Bank a.s. (Czech Republic)
+`ofxstatement-raiffeisencz`_      Plugin for Raiffeisenbank a.s. (Czech Republic)
 `ofxstatement-unicreditcz`_       Plugin for UniCredit Bank Czech Republic and Slovakia
 `ofxstatement-otp`_               Plugin for OTP Bank, operating in Hungary
 `ofxstatement-bubbas`_            Set of plugins, developed by @bubbas:
@@ -95,7 +97,7 @@ Plugin                            Description
 
 `banking.statements.osuuspankki`_ Finnish Osuuspankki bank
 `banking.statements.nordea`_      Nordea bank (at least Finnish branch of it)
-`ofxstatement-1822direkt`_        German bank 1822direkt.com
+`ofxstatement-germany`_           Plugin for several german banks (1822direkt and Postbank at the moment)
 `ofxstatement-austrian`_          Plugins for several banks, operating in Austria:
                                   Easybank, ING-Diba, Livebank, Raiffeisenbank.
 `ofxstatement-postfinance`_       Swiss PostFinance (E-Finance Java text based bank/credit statements).
@@ -103,6 +105,7 @@ Plugin                            Description
 `ofxstatement-be-keytrade`_       KeytradeBank (Belgium)
 `ofxstatement-be-ing`_            ING (Belgium)
 `ofxstatement-be-kbc`_            KBC (Belgium)
+`ofxstatement-be-argenta`_        Argenta (Belgium)
 `ofxstatement-betterment`_        Betterment (https://www.betterment.com/)
 `ofxstatement-simple`_            Simple (the bank, https://www.simple.com/) JSON financial statement format
 `ofxstatement-latvian`_           Latvian banks
@@ -113,24 +116,41 @@ Plugin                            Description
 `ofxstatement-polish`_            Support for some Polish banks and financial institutions
 `ofxstatement-russian`_           Support for several Russian banks: Avangard, Tinkoff, Sberbank (debit).
 `ofxstatement-dab`_               DAB Bank (Germany)
+`ofxstatement-consors`_           Consorsbank (Germany)
 `ofxstatement-is-arionbanki`_     Arion bank in Iceland
+`ofxstatement-be-triodos`_        Belgian Triodos Bank CSV statements
+`ofxstatement-de-triodos`_        German Triodos Bank CSV statements (also works for GLS Bank)
+`ofxstatement-lansforsakringar`_  Länsförsäkringar (Sweden), it parses Kontoutdrag.xls for private accounts
+`ofxstatement-revolut`_           Revolut Mastercard
+`ofxstatement-sp-freiburg`_       Sparkasse Freiburg-Nördlicher Breisgau (Germany)
+`ofxstatement-al_bank`_           Arbejdernes Landsbank (Denmark)
+`ofxstatement-fineco`_            FinecoBank (Italy)
+`ofxstatement-intesasp`_          Intesa San Paolo (xlsx balance file)
+`ofxstatement-de-ing`_            Ing Diba Bank (Germany)
+`ofxstatement-us-first-republic`_ First Republic Bank (USA)
+`ofxstatement-cz-komercni`_       Komerční banka (Czech Republic)
+`ofxstatement-cd-tmb`_            Trust Merchant Bank (DRC)
+`ofxstatement-zm-stanbic`_        Stanbic Bank (Zambia)
 ================================= ============================================
 
 
 .. _ofxstatement-lithuanian: https://github.com/kedder/ofxstatement-lithuanian
 .. _ofxstatement-czech: https://gitlab.com/mcepl/ofxstatement-czech
+.. _ofxstatement-airbankcz: https://github.com/milankni/ofxstatement-airbankcz
+.. _ofxstatement-raiffeisencz: https://github.com/milankni/ofxstatement-raiffeisencz
 .. _ofxstatement-unicreditcz: https://github.com/milankni/ofxstatement-unicreditcz
 .. _ofxstatement-otp: https://github.com/abesto/ofxstatement-otp
 .. _ofxstatement-bubbas: https://github.com/bubbas/ofxstatement-bubbas
 .. _banking.statements.osuuspankki: https://github.com/koodaamo/banking.statements.osuuspankki
 .. _banking.statements.nordea: https://github.com/koodaamo/banking.statements.nordea
-.. _ofxstatement-1822direkt: https://github.com/MirkoDziadzka/ofxstatement-1822direkt
+.. _ofxstatement-germany: https://github.com/MirkoDziadzka/ofxstatement-germany
 .. _ofxstatement-austrian: https://github.com/nblock/ofxstatement-austrian
 .. _ofxstatement-postfinance: https://pypi.python.org/pypi/ofxstatement-postfinance
 .. _ofxstatement-mbank-sk: https://github.com/epitheton/ofxstatement-mbank-sk
 .. _ofxstatement-be-keytrade: https://github.com/Scotchy49/ofxstatement-be-keytrade
-.. _ofxstatement-be-ing: https://github.com/TheoMarescaux/ofxstatement-be-ing
+.. _ofxstatement-be-ing: https://github.com/jbbandos/ofxstatement-be-ing
 .. _ofxstatement-be-kbc: https://github.com/plenaerts/ofxstatement-be-kbc
+.. _ofxstatement-be-argenta: https://github.com/woutbr/ofxstatement-be-argenta
 .. _ofxstatement-betterment: https://github.com/cmayes/ofxstatement-betterment
 .. _ofxstatement-simple: https://github.com/cmayes/ofxstatement-simple
 .. _ofxstatement-latvian: https://github.com/gintsmurans/ofxstatement-latvian
@@ -141,7 +161,22 @@ Plugin                            Description
 .. _ofxstatement-polish: https://github.com/yay6/ofxstatement-polish
 .. _ofxstatement-russian: https://github.com/gerasiov/ofxstatement-russian
 .. _ofxstatement-dab: https://github.com/JohannesKlug/ofxstatement-dab
+.. _ofxstatement-consors: https://github.com/JohannesKlug/ofxstatement-consors
 .. _ofxstatement-is-arionbanki: https://github.com/Dagur/ofxstatement-is-arionbanki
+.. _ofxstatement-be-triodos: https://github.com/renardeau/ofxstatement-be-triodos
+.. _ofxstatement-de-triodos: https://github.com/pianoslum/ofxstatement-de-triodos
+.. _ofxstatement-lansforsakringar: https://github.com/lbschenkel/ofxstatement-lansforsakringar
+.. _ofxstatement-revolut: https://github.com/mlaitinen/ofxstatement-revolut
+.. _ofxstatement-sp-freiburg: https://github.com/omarkohl/ofxstatement-sparkasse-freiburg
+.. _ofxstatement-al_bank: https://github.com/lbschenkel/ofxstatement-al_bank
+.. _ofxstatement-fineco: https://github.com/frankIT/ofxstatement-fineco
+.. _ofxstatement-intesasp: https://github.com/Jacotsu/ofxstatement-intesasp
+.. _ofxstatement-de-ing: https://github.com/fabolhak/ofxstatement-de-ing
+.. _ofxstatement-germany: https://github.com/MirkoDziadzka/ofxstatement-germany
+.. _ofxstatement-us-first-republic: https://github.com/medovina/ofxstatement-us-first-republic
+.. _ofxstatement-cz-komercni: https://github.com/medovina/ofxstatement-cz-komercni
+.. _ofxstatement-cd-tmb: https://github.com/BIZ4Africa/ofxstatement-cd-tmb
+.. _ofxstatement-zm-stanbic: https://github.com/BIZ4Africa/ofxstatement-zm-stanbic
 
 Advanced Configuration
 ======================
