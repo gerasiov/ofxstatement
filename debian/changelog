@@ -1,3 +1,11 @@
+ofxstatement (0.6.4-2) unstable; urgency=medium
+
+  * d/control: wrap-and-sort.
+  * d/control: Bump Standards-Version (no changes needed).
+  * d/control, d/rules: Build manpage with help2man.
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Tue, 05 May 2020 13:12:14 +0300
+
 ofxstatement (0.6.4-1) unstable; urgency=medium
 
   * New upstream version 0.6.4
