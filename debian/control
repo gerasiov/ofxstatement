@@ -3,8 +3,11 @@ Section: misc
 Priority: optional
 Maintainer: Alexander GQ Gerasiov <gq@debian.org>
 Build-Depends: debhelper-compat (= 12),
- dh-python, python3-all, python3-setuptools,
- python3-appdirs, python3-mock,
+               dh-python,
+               python3-all,
+               python3-appdirs,
+               python3-mock,
+               python3-setuptools
 Standards-Version: 4.0.0
 Homepage: https://github.com/kedder/ofxstatement
 Vcs-Git: https://github.com/gerasiov/ofxstatement.git
@@ -12,7 +15,7 @@ Vcs-Browser: https://github.com/gerasiov/ofxstatement
 
 Package: ofxstatement
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}
 Recommends: ofxstatement-plugins
 Description: tool to convert proprietary bank statement to OFX format
  Most internet banking systems are capable of exporting account transactions to
