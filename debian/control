@@ -8,7 +8,7 @@ Build-Depends: debhelper-compat (= 12),
                python3-appdirs,
                python3-mock,
                python3-setuptools
-Standards-Version: 4.0.0
+Standards-Version: 4.5.0
 Homepage: https://github.com/kedder/ofxstatement
 Vcs-Git: https://github.com/gerasiov/ofxstatement.git
 Vcs-Browser: https://github.com/gerasiov/ofxstatement
