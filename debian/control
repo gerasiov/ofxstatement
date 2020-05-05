@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Alexander GQ Gerasiov <gq@debian.org>
 Build-Depends: debhelper-compat (= 12),
                dh-python,
+               help2man,
                python3-all,
                python3-appdirs,
                python3-mock,

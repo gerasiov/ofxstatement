@@ -8,4 +8,14 @@ export PYBUILD_NAME = ofxstatement
 
 override_dh_clean:
 	dh_clean
+	rm -f ofxstatement.1
 	rm -rf src/ofxstatement.egg-info
+
+override_dh_auto_install:
+	dh_auto_install $@
+	PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 \
+		   help2man --no-info \
+		   --name="convert bank statements to OFX format" \
+		   --output ofxstatement.1 \
+		   debian/ofxstatement/usr/bin/ofxstatement
+	dh_installman ofxstatement.1
