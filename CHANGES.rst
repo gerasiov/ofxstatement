@@ -1,6 +1,18 @@
-~~~~~~~
 Changes
-~~~~~~~
+-------
+
+0.7.1 (2020-09-14)
+==================
+
+- Include PEP-561 marker into source code distribution
+
+
+0.7.0 (2020-09-13)
+==================
+
+- Drop support for Python 3.4, 3.5, add support for Python 3.8
+- Fixed naive end balance validation (#106)
+- Modernize development environment (use pipenv, mypy, black)
 
 0.6.5 (2020-06-09)
 ==================
