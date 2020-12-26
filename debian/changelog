@@ -1,3 +1,14 @@
+ofxstatement (0.7.1-1) unstable; urgency=medium
+
+  * New upstream version 0.7.1
+  * fix_autotests.patch refreshed.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * d/copyright: Use secure protocol in URI.
+  * d/control: Recommend latest plugin version.
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Sat, 26 Dec 2020 21:28:49 +0300
+
 ofxstatement (0.6.5-1) unstable; urgency=medium
 
   * New upstream version 0.6.5
