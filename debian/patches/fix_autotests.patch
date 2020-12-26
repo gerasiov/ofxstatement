@@ -1,11 +1,9 @@
-diff --git a/src/ofxstatement/tool.py b/src/ofxstatement/tool.py
-index 8a3f51c..87c7721 100644
 --- a/src/ofxstatement/tool.py
 +++ b/src/ofxstatement/tool.py
-@@ -15,7 +15,10 @@ log = logging.getLogger(__name__)
+@@ -33,7 +33,10 @@
  
  
- def get_version():
+ def get_version() -> str:
 -    dist = pkg_resources.get_distribution("ofxstatement")
 +    try:
 +        dist = pkg_resources.get_distribution("ofxstatement")
