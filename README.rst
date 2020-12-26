@@ -1,11 +1,14 @@
-~~~~~~~~~~~~~
 OFX Statement
-~~~~~~~~~~~~~
+-------------
 
-.. image:: https://travis-ci.org/kedder/ofxstatement.png?branch=master
-    :target: https://travis-ci.org/kedder/ofxstatement
+.. image:: https://travis-ci.com/kedder/ofxstatement.svg?branch=master
+    :target: https://travis-ci.com/kedder/ofxstatement
 .. image:: https://coveralls.io/repos/kedder/ofxstatement/badge.png?branch=master
     :target: https://coveralls.io/r/kedder/ofxstatement?branch=master
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :target: http://mypy-lang.org/
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
 
 Ofxstatement is a tool to convert proprietary bank statements to OFX format,
 suitable for importing into personal accounting systems like GnuCash. This
@@ -76,20 +79,20 @@ accounting system.
 Development / test
 ==================
 
-When you want to develop, first fork this repository to your GitHub
-environment and then::
+``ofxstatemnt`` uses `pipenv`_ to manage the development environment and
+dependencies::
 
+  $ pip install pipenv
   $ git clone https://github.com/<your_account>/ofxstatement.git
   $ cd ofxstatement
-  $ pip install -e .
+  $ pipenv sync --dev
 
-Now you can install the test requirements::
+.. _pipenv: https://github.com/pypa/pipenv
 
-  $ pip install -r test_requirements.txt
+And finally run the test suite::
 
-And finally run your test::
-
-  $ py.test
+  $ pipenv shell
+  $ pytest
 
 When satisfied, you may create a pull request.
 
@@ -133,7 +136,7 @@ Plugin                            Description
 `ofxstatement-iso20022`_          Support for generic ISO-20022 format
 `ofxstatement-seb`_               SEB (Sweden), it parses Export.xlsx for private accounts
 `ofxstatement-alfabank`_          AlfaBank (Russia), it parses movementList.csv for private accounts
-`ofxstatement-paypal`_            PayPal, it parses *.csv for private accounts
+`ofxstatement-paypal`_            PayPal, it parses ``*.csv`` for private accounts
 `ofxstatement-polish`_            Support for some Polish banks and financial institutions
 `ofxstatement-russian`_           Support for several Russian banks: Avangard, Tinkoff, Sberbank (debit).
 `ofxstatement-dab`_               DAB Bank (Germany)
