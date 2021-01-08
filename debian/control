@@ -17,7 +17,7 @@ Vcs-Browser: https://github.com/gerasiov/ofxstatement
 Package: ofxstatement
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}
-Recommends: ofxstatement-plugins
+Recommends: ofxstatement-plugins (>= 20210108)
 Description: tool to convert proprietary bank statement to OFX format
  Most internet banking systems are capable of exporting account transactions to
  some sort of computer readable formats, but few supports standard data formats,
